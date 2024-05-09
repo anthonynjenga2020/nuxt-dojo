@@ -5,11 +5,15 @@
         Aut nam fuga aspernatur sint necessitatibus ducimus eveniet quas harum vitae dolore!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Aut nam fuga aspernatur sint necessitatibus ducimus eveniet quas harum vitae dolore!</p>
+        <div>{{ data }}</div>
     </div>
 </template>
 
 <script setup>
-
+const { data } = await useFetch('/api/ninja?name=mario', {
+    method: 'post',
+    body: { age: 30 }
+})
 
 </script>
 
